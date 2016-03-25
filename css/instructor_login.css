@@ -1,0 +1,49 @@
+.header,.title_name
+{
+    background-color: #bf360c ;
+    text-align: center;
+    text-decoration-color: aliceblue;
+    padding: 1px;
+    border-color: blue;
+    border-width: 2px;
+   
+    margin-top: -15px;
+}
+
+.logo{
+    padding: 4px;
+margin-left: 40px; 
+    margin-top: 10px;
+}
+.home{
+    text-align: right;
+    margin-right: 20px;
+    font-size: 20px;
+}
+ h2,.head{color: black;}
+h1,h2{color: aliceblue;}
+
+.ins_login
+{
+    margin-top: 40px;
+   text-align: center;
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 100px;
+    font-size: 120%;
+box-shadow: 5px 5px 5px 5px #8d6e63; 
+box-shadow: 5px 5px 5px 5px #8d6e63; 
+box-shadow: 5px 5px 5px 5px #8d6e63;
+    border-color: black;
+   /*background-color:darksalmon;*/
+}
+
+input{border:1px outset black;border-radius:5px}
+input[type="submit"]{background-color:bisque; font-size: 105%; text-align:right;}
+
+a,a.one:hover{color: blue;}
+a{color: bisque;
+    text-decoration: none;
+}
+a.one{color:darkorange}
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+<link href="../css/login_instructor.css"  rel="stylesheet"/>
+
+</head>
+<body>
+<div class="header">
+    <div class="logo">
+         <p><img src="../img/LOGO_IIITV.png"  width="90" 
+height="80" align="left"  />
+        </div>
+<div class="title_name">
+    <h1>Result Management System</h1>
+        <h2>IIITV</h2></p>
+<div class="home">
+    <a href="../index.html">Home</a>
+       <a href="instructor_login.html">Logout</a>
+ </div>
+</div>
+</div>
+ 
+    
+<div class="login_opt">
+    <h2 class="ab">Choose your choice</h3>
+<form class="login_instructor"> 
+<p>Acadyear
+<select name="acadyear">
+<option value="none"></option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+
+</select></p>
+<p>Semester 
+<select name="semester">
+<option value="none"></option>
+<option value="1">sem 1</option>
+<option value="2">sem 2</option>
+<option value="3">sem 3</option>
+
+</select></p>
+    
+    <p>Course 
+<select name="courseno">
+<option value="none"></option>
+<option value="MA101">MA101</option>
+<option value="PH101">PH101</option>
+<option value="IT102">IT102</option>
+<option value="IT101">IT101</option>
+<option value="HM101">HM101</option>
+<option value="EL101">EL101</option>
+<option value="MA102">MA102</option>
+<option value="CS101">CS101</option>
+<option value="CS103">CS103</option>
+<option value="EL102">EL102</option>
+<option value="CS102">CS102</option>
+<option value="CS104">CS104</option>
+<option value="IT201">IT201</option>
+<option value="cs201">CS201</option>
+<option value="CS202">CS202</option>
+<option value="CS203">CS203</option>
+<option value="CS204">CS204</option>
+<option value="MA201">MA201</option>
+<option value="HM201">HM201</option>
+<option value="IT203">IT203</option>
+<option value="IT202">IT202</option>
+
+</select></p>
+<input type="submit" value="submit" />
+</form>
+</div>  
+
+<div class="data-wrapper">
+    
+</div>
+<script src="../js/jquery-2.1.4.js"></script>
+<script>
+         $('document').ready(function(){
+          $('.login_instructor').submit(function(e){
+            var $this = $(this);
+            e.preventDefault();
+            var input = $this.serialize();
+            console.log("Input"+input);
+              
+               $.post('../php/req_table.php',input,function(data){
+                console.log("Res"+data);
+                   $('.data-wrapper').html(data);
+            })
+            })
+         })
+         
+    </script>
+</body>
+</html>
