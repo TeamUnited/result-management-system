@@ -58,7 +58,7 @@ function login_student($username,$password)
             return 0;
         }
         else {
-           
+            session_start();
             $_SESSION["username"] = $_POST['username'];
             echo "<script>
                window.location='../php/student_select.php'

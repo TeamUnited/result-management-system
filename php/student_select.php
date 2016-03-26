@@ -1,4 +1,3 @@
-
 <html>
 <head>
 <link href="../css/login_instructor.css"  rel="stylesheet"/>
