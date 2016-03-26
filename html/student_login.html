@@ -21,7 +21,8 @@
 </div>
 
 <div class="ins_login">
-    <form class="login1">
+    <form class="login1" name="myForm"  onsubmit="return validateForm()"
+method="post">
         <h2 class="head">STUDENT LOGIN</h2>
         <p>Username:
             <input type="text" name="username" size="10" maxlength="20" />
@@ -31,6 +32,8 @@
         </p>
         <input type="submit" value="login" />
     </form>
+    <pre><script src="../js/student_login.js">
+</script></pre>
 
     <div class="data-wrapper1">
     </div>
