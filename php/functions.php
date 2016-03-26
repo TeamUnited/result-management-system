@@ -16,7 +16,7 @@ function login_details($username,$password)
 {
     global $conn;
     $res1='';
-        $query="SELECT * FROM logininstruct WHERE username=$username and password=$password";
+        $query="SELECT * FROM logininstruct WHERE username='$username' and password='$password' ";
         $res1=$conn->query($query);
         if(!$username || !$password || (!$username && !$password) ) {
             /*echo "<h6>**Username and password both must be filled</h6>";*/
@@ -56,10 +56,10 @@ function login_student($username,$password)
     global $conn;
     $res1='';
     
-        $query="SELECT * FROM loginuser WHERE username=$username and password=$password";
+        $query="SELECT * FROM loginuser WHERE username='$username' and password='$password'";
         $res1=$conn->query($query);
         
-        if(!$username || !$password || (!$username && !$password) ) {
+        if(!$username || !$password || (!$username && !$password)) {
             /*echo "<h6>**Username and password both must be filled</h6>";*/
             echo '<span style="color:#FF0000;"><h6>**Username and password both must be filled</h6></span>';
              return 0;
