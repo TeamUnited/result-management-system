@@ -47,10 +47,8 @@ method="post">
             var $this = $(this);
             e.preventDefault();
             var input = $this.serialize();
-            console.log("Input" + input);
-
+            /*console.log("Input" + input);*/
             $.post('../php/functions.php', input + '&std=1', function (data) {
-                console.log("Res" + data);
                 $('.data-wrapper1').html(data);
                 
             })

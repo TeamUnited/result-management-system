@@ -16,10 +16,15 @@ function login_details($username,$password)
 {
     global $conn;
     $res1='';
-        $query="SELECT * FROM logininstruct WHERE username=$username and password=$password";
+        $query="SELECT * FROM logininstruct WHERE username='$username' and password='$password' ";
         $res1=$conn->query($query);
-        if (!$res1->num_rows) {
-            echo "<h6>**Incorrect username or password</h6>";
+        if(!$username || !$password || (!$username && !$password) ) {
+            /*echo "<h6>**Username and password both must be filled</h6>";*/
+            echo '<span style="color:#FF0000;"><h6>**Username and password both must be filled</h6></span>';
+             return 0;
+        }
+        elseif (!$res1->num_rows) {
+            echo '<span style="color:#FF0000;"><h6>**Incorrect username or password</h6></span>';
             return 0;
         }
         else {
@@ -51,10 +56,16 @@ function login_student($username,$password)
     global $conn;
     $res1='';
     
-        $query="SELECT * FROM loginuser WHERE username=$username and password=$password";
+        $query="SELECT * FROM loginuser WHERE username='$username' and password='$password'";
         $res1=$conn->query($query);
-        if (!$res1->num_rows) {
-            echo "<h6>**Incorrect username or password</h6>";
+        
+        if(!$username || !$password || (!$username && !$password)) {
+            /*echo "<h6>**Username and password both must be filled</h6>";*/
+            echo '<span style="color:#FF0000;"><h6>**Username and password both must be filled</h6></span>';
+             return 0;
+        }
+        elseif (!$res1->num_rows) {
+            echo '<span style="color:#FF0000;"><h6>**Incorrect username or password</h6></span>';
             return 0;
         }
         else {
